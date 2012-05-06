@@ -1,0 +1,51 @@
+Compiled from "JavaParserProfiler.java"
+public class org.parboiled.examples.java.JavaParserProfiler extends org.parboiled.examples.java.Main{
+public org.parboiled.examples.java.JavaParserProfiler();
+  LineNumberTable: 
+   line 23: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      5      0    this       Lorg/parboiled/examples/java/JavaParserProfiler;
+
+
+public static void main(java.lang.String[]);
+  LineNumberTable: 
+   line 28: 0
+   line 29: 11
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      12      0    args       [Ljava/lang/String;
+
+
+protected void run(java.lang.String[]);
+  LineNumberTable: 
+   line 33: 0
+   line 34: 5
+   line 35: 13
+   line 36: 19
+   line 37: 29
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      30      0    this       Lorg/parboiled/examples/java/JavaParserProfiler;
+   0      30      1    args       [Ljava/lang/String;
+   13      17      2    report       Lorg/parboiled/parserunners/ProfilingParseRunner$Report;
+
+
+protected org.parboiled.support.ParsingResult run(org.parboiled.Rule, java.lang.String);
+  LineNumberTable: 
+   line 40: 0
+   line 41: 7
+   line 43: 19
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      28      0    this       Lorg/parboiled/examples/java/JavaParserProfiler;
+   0      28      1    rootRule       Lorg/parboiled/Rule;
+   0      28      2    sourceText       Ljava/lang/String;
+
+
+}
+

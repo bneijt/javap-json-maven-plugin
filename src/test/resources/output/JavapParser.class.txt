@@ -1,0 +1,27 @@
+Compiled from "JavapParser.java"
+public class nl.bneijt.javapjson.JavapParser extends java.lang.Object{
+public nl.bneijt.javapjson.JavapParser();
+  LineNumberTable: 
+   line 7: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      5      0    this       Lnl/bneijt/javapjson/JavapParser;
+
+
+public static nl.bneijt.javapjson.JavapLOutput parseL(java.lang.String);
+  LineNumberTable: 
+   line 11: 0
+   line 12: 13
+   line 13: 29
+   line 16: 39
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      47      0    input       Ljava/lang/String;
+   13      34      1    parser       Lnl/bneijt/javapjson/JavapLParser;
+   29      18      2    result       Lorg/parboiled/support/ParsingResult;
+
+
+}
+

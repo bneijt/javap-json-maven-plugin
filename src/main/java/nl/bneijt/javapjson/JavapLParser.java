@@ -19,6 +19,7 @@ public class JavapLParser extends JavaParser  {
 
     public Rule JavapInterfaceDeclaration() {
         return Sequence(
+            ZeroOrMore(MemberDecl()),
             Modifier(), QualifiedIdentifier(), "();", NEWLINE
             ,LineNumberTable()
             ,LocalVariableTable()

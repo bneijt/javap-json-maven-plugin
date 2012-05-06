@@ -1,0 +1,118 @@
+Compiled from "JavapLParser.java"
+public class nl.bneijt.javapjson.JavapLParser extends org.parboiled.examples.java.JavaParser{
+final org.parboiled.Rule NEWLINE;
+
+public nl.bneijt.javapjson.JavapLParser();
+  LineNumberTable: 
+   line 9: 0
+   line 11: 4
+   line 9: 31
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      32      0    this       Lnl/bneijt/javapjson/JavapLParser;
+
+
+public org.parboiled.Rule JavapLOutput();
+  LineNumberTable: 
+   line 14: 0
+   line 15: 1
+   line 16: 20
+   line 17: 39
+   line 14: 48
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      52      0    this       Lnl/bneijt/javapjson/JavapLParser;
+
+
+public org.parboiled.Rule JavapInterfaceDeclaration();
+  LineNumberTable: 
+   line 21: 0
+   line 22: 1
+   line 23: 27
+   line 24: 34
+   line 21: 39
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      43      0    this       Lnl/bneijt/javapjson/JavapLParser;
+
+
+public org.parboiled.Rule LocalVariableTable();
+  LineNumberTable: 
+   line 29: 0
+   line 30: 13
+   line 31: 25
+   line 29: 41
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      45      0    this       Lnl/bneijt/javapjson/JavapLParser;
+
+
+public org.parboiled.Rule LocalVariableTableRow();
+  LineNumberTable: 
+   line 34: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      88      0    this       Lnl/bneijt/javapjson/JavapLParser;
+
+
+public org.parboiled.Rule LinkReferencePath();
+  LineNumberTable: 
+   line 38: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      21      0    this       Lnl/bneijt/javapjson/JavapLParser;
+
+
+public org.parboiled.Rule WhiteSpace();
+  LineNumberTable: 
+   line 41: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      11      0    this       Lnl/bneijt/javapjson/JavapLParser;
+
+
+public org.parboiled.Rule LineNumberTable();
+  LineNumberTable: 
+   line 45: 0
+   line 46: 13
+   line 45: 29
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      33      0    this       Lnl/bneijt/javapjson/JavapLParser;
+
+
+public org.parboiled.Rule LineNumberTableRow();
+  LineNumberTable: 
+   line 49: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      34      0    this       Lnl/bneijt/javapjson/JavapLParser;
+
+
+public org.parboiled.Rule JavapLClassDeclaration();
+  LineNumberTable: 
+   line 53: 0
+   line 54: 1
+   line 55: 5
+   line 56: 15
+   line 57: 22
+   line 58: 33
+   line 59: 52
+   line 53: 69
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      73      0    this       Lnl/bneijt/javapjson/JavapLParser;
+
+
+}
+

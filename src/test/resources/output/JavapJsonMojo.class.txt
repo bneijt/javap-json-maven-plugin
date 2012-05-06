@@ -1,0 +1,64 @@
+Compiled from "JavapJsonMojo.java"
+public class nl.bneijt.javapjson.JavapJsonMojo extends org.apache.maven.plugin.AbstractMojo{
+public nl.bneijt.javapjson.JavapJsonMojo();
+  LineNumberTable: 
+   line 41: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      5      0    this       Lnl/bneijt/javapjson/JavapJsonMojo;
+
+
+public void execute()   throws org.apache.maven.plugin.MojoExecutionException;
+  LineNumberTable: 
+   line 63: 0
+   line 64: 8
+   line 65: 18
+   line 68: 50
+   line 69: 82
+   line 70: 91
+   line 71: 98
+   line 72: 105
+   line 74: 137
+   line 77: 170
+   line 78: 211
+   line 79: 219
+   line 81: 226
+   line 84: 260
+   line 85: 271
+   line 88: 278
+   line 89: 285
+   line 90: 292
+   line 91: 312
+   line 92: 340
+   line 93: 398
+   line 94: 406
+   line 95: 411
+   line 96: 419
+   line 98: 425
+   line 100: 435
+   line 102: 437
+   line 77: 449
+   line 107: 459
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      460      0    this       Lnl/bneijt/javapjson/JavapJsonMojo;
+   8      452      1    jsonFactory       Lcom/fasterxml/jackson/core/JsonFactory;
+   82      378      2    jsonDirectory       Ljava/lang/String;
+   91      369      3    jsonDirectoryFile       Ljava/io/File;
+   211      238      4    classFile       Ljava/io/File;
+   219      230      6    output       Ljava/lang/String;
+   226      223      7    parseL       Lnl/bneijt/javapjson/JavapLOutput;
+   260      189      8    outputFile       Ljava/io/File;
+   271      164      9    jsonOutput       Lcom/fasterxml/jackson/core/JsonGenerator;
+   285      150      10    classDirectory       Ljava/io/File;
+   292      143      11    classFileName       Ljava/lang/String;
+   312      123      12    restOfDirectory       Ljava/lang/String;
+   340      95      13    jsonOutputFileDirectory       Ljava/io/File;
+   398      37      14    jsonOutputFile       Ljava/io/File;
+   437      12      9    e       Ljava/io/IOException;
+
+
+}
+

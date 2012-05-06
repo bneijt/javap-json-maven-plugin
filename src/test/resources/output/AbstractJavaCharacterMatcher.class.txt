@@ -1,0 +1,70 @@
+Compiled from "AbstractJavaCharacterMatcher.java"
+public abstract class org.parboiled.examples.java.AbstractJavaCharacterMatcher extends org.parboiled.matchers.CustomMatcher{
+protected org.parboiled.examples.java.AbstractJavaCharacterMatcher(java.lang.String);
+  LineNumberTable: 
+   line 25: 0
+   line 26: 5
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      6      0    this       Lorg/parboiled/examples/java/AbstractJavaCharacterMatcher;
+   0      6      1    label       Ljava/lang/String;
+
+
+public final boolean isSingleCharMatcher();
+  LineNumberTable: 
+   line 30: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      2      0    this       Lorg/parboiled/examples/java/AbstractJavaCharacterMatcher;
+
+
+public final boolean canMatchEmpty();
+  LineNumberTable: 
+   line 35: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      2      0    this       Lorg/parboiled/examples/java/AbstractJavaCharacterMatcher;
+
+
+public boolean isStarterChar(char);
+  LineNumberTable: 
+   line 40: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      6      0    this       Lorg/parboiled/examples/java/AbstractJavaCharacterMatcher;
+   0      6      1    c       C
+
+
+public final char getStarterChar();
+  LineNumberTable: 
+   line 45: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      3      0    this       Lorg/parboiled/examples/java/AbstractJavaCharacterMatcher;
+
+
+public final boolean match(org.parboiled.MatcherContext);
+  LineNumberTable: 
+   line 49: 0
+   line 50: 11
+   line 52: 13
+   line 53: 18
+   line 54: 22
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      24      0    this       Lorg/parboiled/examples/java/AbstractJavaCharacterMatcher;
+   0      24      1    context       Lorg/parboiled/MatcherContext;
+
+
+protected abstract boolean acceptChar(char);
+
+
+
+}
+

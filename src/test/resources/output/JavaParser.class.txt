@@ -1,0 +1,1869 @@
+Compiled from "JavaParser.java"
+public class org.parboiled.examples.java.JavaParser extends org.parboiled.BaseParser{
+public final org.parboiled.Rule ASSERT;
+
+public final org.parboiled.Rule BREAK;
+
+public final org.parboiled.Rule CASE;
+
+public final org.parboiled.Rule CATCH;
+
+public final org.parboiled.Rule CLASS;
+
+public final org.parboiled.Rule CONTINUE;
+
+public final org.parboiled.Rule DEFAULT;
+
+public final org.parboiled.Rule DO;
+
+public final org.parboiled.Rule ELSE;
+
+public final org.parboiled.Rule ENUM;
+
+public final org.parboiled.Rule EXTENDS;
+
+public final org.parboiled.Rule FINALLY;
+
+public final org.parboiled.Rule FINAL;
+
+public final org.parboiled.Rule FOR;
+
+public final org.parboiled.Rule IF;
+
+public final org.parboiled.Rule IMPLEMENTS;
+
+public final org.parboiled.Rule IMPORT;
+
+public final org.parboiled.Rule INTERFACE;
+
+public final org.parboiled.Rule INSTANCEOF;
+
+public final org.parboiled.Rule NEW;
+
+public final org.parboiled.Rule PACKAGE;
+
+public final org.parboiled.Rule RETURN;
+
+public final org.parboiled.Rule STATIC;
+
+public final org.parboiled.Rule SUPER;
+
+public final org.parboiled.Rule SWITCH;
+
+public final org.parboiled.Rule SYNCHRONIZED;
+
+public final org.parboiled.Rule THIS;
+
+public final org.parboiled.Rule THROWS;
+
+public final org.parboiled.Rule THROW;
+
+public final org.parboiled.Rule TRY;
+
+public final org.parboiled.Rule VOID;
+
+public final org.parboiled.Rule WHILE;
+
+protected final org.parboiled.Rule AT;
+
+protected final org.parboiled.Rule AND;
+
+protected final org.parboiled.Rule ANDAND;
+
+protected final org.parboiled.Rule ANDEQU;
+
+protected final org.parboiled.Rule BANG;
+
+protected final org.parboiled.Rule BSR;
+
+protected final org.parboiled.Rule BSREQU;
+
+protected final org.parboiled.Rule COLON;
+
+protected final org.parboiled.Rule COMMA;
+
+protected final org.parboiled.Rule DEC;
+
+protected final org.parboiled.Rule DIV;
+
+protected final org.parboiled.Rule DIVEQU;
+
+protected final org.parboiled.Rule DOT;
+
+protected final org.parboiled.Rule ELLIPSIS;
+
+protected final org.parboiled.Rule EQU;
+
+protected final org.parboiled.Rule EQUAL;
+
+protected final org.parboiled.Rule GE;
+
+protected final org.parboiled.Rule GT;
+
+protected final org.parboiled.Rule HAT;
+
+protected final org.parboiled.Rule HATEQU;
+
+protected final org.parboiled.Rule INC;
+
+protected final org.parboiled.Rule LBRK;
+
+protected final org.parboiled.Rule LE;
+
+protected final org.parboiled.Rule LPAR;
+
+protected final org.parboiled.Rule LPOINT;
+
+protected final org.parboiled.Rule LT;
+
+protected final org.parboiled.Rule LWING;
+
+protected final org.parboiled.Rule MINUS;
+
+protected final org.parboiled.Rule MINUSEQU;
+
+protected final org.parboiled.Rule MOD;
+
+protected final org.parboiled.Rule MODEQU;
+
+protected final org.parboiled.Rule NOTEQUAL;
+
+protected final org.parboiled.Rule OR;
+
+protected final org.parboiled.Rule OREQU;
+
+protected final org.parboiled.Rule OROR;
+
+protected final org.parboiled.Rule PLUS;
+
+protected final org.parboiled.Rule PLUSEQU;
+
+protected final org.parboiled.Rule QUERY;
+
+protected final org.parboiled.Rule RBRK;
+
+protected final org.parboiled.Rule RPAR;
+
+protected final org.parboiled.Rule RPOINT;
+
+protected final org.parboiled.Rule RWING;
+
+protected final org.parboiled.Rule SEMI;
+
+protected final org.parboiled.Rule SL;
+
+protected final org.parboiled.Rule SLEQU;
+
+protected final org.parboiled.Rule SR;
+
+protected final org.parboiled.Rule SREQU;
+
+protected final org.parboiled.Rule STAR;
+
+protected final org.parboiled.Rule STAREQU;
+
+protected final org.parboiled.Rule TILDA;
+
+public org.parboiled.examples.java.JavaParser();
+  LineNumberTable: 
+   line 55: 0
+   line 909: 4
+   line 910: 14
+   line 911: 24
+   line 912: 34
+   line 913: 44
+   line 914: 54
+   line 915: 64
+   line 916: 74
+   line 917: 84
+   line 918: 94
+   line 919: 104
+   line 920: 114
+   line 921: 124
+   line 922: 134
+   line 923: 144
+   line 924: 154
+   line 925: 164
+   line 926: 174
+   line 927: 184
+   line 928: 194
+   line 929: 204
+   line 930: 214
+   line 931: 224
+   line 932: 234
+   line 933: 244
+   line 934: 254
+   line 935: 264
+   line 936: 274
+   line 937: 284
+   line 938: 294
+   line 939: 304
+   line 940: 314
+   line 1072: 324
+   line 1073: 334
+   line 1074: 350
+   line 1075: 360
+   line 1076: 370
+   line 1077: 386
+   line 1078: 403
+   line 1079: 414
+   line 1080: 425
+   line 1081: 436
+   line 1082: 447
+   line 1083: 464
+   line 1084: 475
+   line 1085: 486
+   line 1086: 497
+   line 1087: 514
+   line 1088: 525
+   line 1089: 536
+   line 1090: 554
+   line 1091: 571
+   line 1092: 582
+   line 1093: 593
+   line 1094: 604
+   line 1095: 615
+   line 1096: 626
+   line 1097: 637
+   line 1098: 655
+   line 1099: 666
+   line 1100: 684
+   line 1101: 695
+   line 1102: 712
+   line 1103: 723
+   line 1104: 734
+   line 1105: 752
+   line 1106: 763
+   line 1107: 774
+   line 1108: 792
+   line 1109: 803
+   line 1110: 814
+   line 1111: 825
+   line 1112: 836
+   line 1113: 847
+   line 1114: 858
+   line 1115: 869
+   line 1116: 886
+   line 1117: 897
+   line 1118: 915
+   line 1119: 926
+   line 1120: 943
+   line 1121: 954
+   line 55: 965
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      966      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule CompilationUnit();
+  LineNumberTable: 
+   line 62: 0
+   line 63: 1
+   line 64: 5
+   line 65: 19
+   line 66: 30
+   line 67: 41
+   line 62: 45
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      49      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule PackageDeclaration();
+  LineNumberTable: 
+   line 72: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      40      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule ImportDeclaration();
+  LineNumberTable: 
+   line 76: 0
+   line 77: 1
+   line 78: 5
+   line 79: 19
+   line 80: 26
+   line 81: 45
+   line 76: 50
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      54      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule TypeDeclaration();
+  LineNumberTable: 
+   line 86: 0
+   line 87: 1
+   line 88: 2
+   line 89: 10
+   line 90: 11
+   line 91: 15
+   line 92: 25
+   line 93: 32
+   line 89: 37
+   line 87: 44
+   line 96: 47
+   line 86: 55
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      59      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule ClassDeclaration();
+  LineNumberTable: 
+   line 105: 0
+   line 106: 1
+   line 107: 5
+   line 108: 15
+   line 109: 26
+   line 110: 45
+   line 111: 64
+   line 105: 69
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      73      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule ClassBody();
+  LineNumberTable: 
+   line 116: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      28      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule ClassBodyDeclaration();
+  LineNumberTable: 
+   line 120: 0
+   line 121: 1
+   line 122: 5
+   line 123: 31
+   line 120: 52
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      56      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule MemberDecl();
+  LineNumberTable: 
+   line 128: 0
+   line 129: 1
+   line 130: 17
+   line 131: 47
+   line 132: 73
+   line 133: 99
+   line 134: 118
+   line 135: 125
+   line 136: 132
+   line 137: 140
+   line 128: 145
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      149      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule GenericMethodOrConstructorRest();
+  LineNumberTable: 
+   line 142: 0
+   line 143: 1
+   line 144: 36
+   line 142: 56
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      60      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule MethodDeclaratorRest();
+  LineNumberTable: 
+   line 149: 0
+   line 150: 1
+   line 151: 5
+   line 152: 19
+   line 153: 38
+   line 149: 55
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      59      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule VoidMethodDeclaratorRest();
+  LineNumberTable: 
+   line 158: 0
+   line 159: 1
+   line 160: 5
+   line 161: 27
+   line 158: 44
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      48      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule ConstructorDeclaratorRest();
+  LineNumberTable: 
+   line 166: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      36      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule MethodBody();
+  LineNumberTable: 
+   line 170: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      5      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule InterfaceDeclaration();
+  LineNumberTable: 
+   line 178: 0
+   line 179: 1
+   line 180: 5
+   line 181: 15
+   line 182: 26
+   line 183: 45
+   line 178: 50
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      54      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule InterfaceBody();
+  LineNumberTable: 
+   line 188: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      28      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule InterfaceBodyDeclaration();
+  LineNumberTable: 
+   line 192: 0
+   line 193: 1
+   line 194: 21
+   line 192: 29
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      33      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule InterfaceMemberDecl();
+  LineNumberTable: 
+   line 199: 0
+   line 200: 1
+   line 201: 5
+   line 202: 15
+   line 203: 41
+   line 204: 48
+   line 205: 55
+   line 206: 62
+   line 199: 67
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      71      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule InterfaceMethodOrFieldDecl();
+  LineNumberTable: 
+   line 211: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      29      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule InterfaceMethodOrFieldRest();
+  LineNumberTable: 
+   line 215: 0
+   line 216: 1
+   line 217: 17
+   line 215: 25
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      29      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule InterfaceMethodDeclaratorRest();
+  LineNumberTable: 
+   line 222: 0
+   line 223: 1
+   line 224: 5
+   line 225: 19
+   line 226: 38
+   line 222: 43
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      47      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule InterfaceGenericMethodDecl();
+  LineNumberTable: 
+   line 231: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      43      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule VoidInterfaceMethodDeclaratorsRest();
+  LineNumberTable: 
+   line 235: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      36      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule ConstantDeclaratorsRest();
+  LineNumberTable: 
+   line 239: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      29      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule ConstantDeclarator();
+  LineNumberTable: 
+   line 243: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      17      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule ConstantDeclaratorRest();
+  LineNumberTable: 
+   line 247: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      28      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule EnumDeclaration();
+  LineNumberTable: 
+   line 255: 0
+   line 256: 1
+   line 257: 5
+   line 258: 15
+   line 259: 34
+   line 255: 39
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      43      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule EnumBody();
+  LineNumberTable: 
+   line 264: 0
+   line 265: 1
+   line 266: 5
+   line 267: 19
+   line 268: 30
+   line 269: 41
+   line 264: 46
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      50      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule EnumConstants();
+  LineNumberTable: 
+   line 274: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      29      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule EnumConstant();
+  LineNumberTable: 
+   line 278: 0
+   line 279: 1
+   line 280: 9
+   line 281: 19
+   line 282: 30
+   line 278: 39
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      43      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule EnumBodyDeclarations();
+  LineNumberTable: 
+   line 287: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      21      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule LocalVariableDeclarationStatement();
+  LineNumberTable: 
+   line 295: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      47      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule VariableDeclarators();
+  LineNumberTable: 
+   line 299: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      29      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule VariableDeclarator();
+  LineNumberTable: 
+   line 303: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      40      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule FormalParameters();
+  LineNumberTable: 
+   line 311: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      28      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule FormalParameter();
+  LineNumberTable: 
+   line 315: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      40      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule FormalParameterDecls();
+  LineNumberTable: 
+   line 319: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      40      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule FormalParameterDeclsRest();
+  LineNumberTable: 
+   line 323: 0
+   line 324: 1
+   line 325: 29
+   line 323: 49
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      53      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule VariableDeclaratorId();
+  LineNumberTable: 
+   line 330: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      21      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule Block();
+  LineNumberTable: 
+   line 338: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      24      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule BlockStatements();
+  LineNumberTable: 
+   line 342: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      9      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule BlockStatement();
+  LineNumberTable: 
+   line 346: 0
+   line 347: 1
+   line 348: 5
+   line 349: 43
+   line 346: 48
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      52      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule Statement();
+  LineNumberTable: 
+   line 354: 0
+   line 355: 1
+   line 356: 5
+   line 357: 54
+   line 358: 99
+   line 359: 162
+   line 358: 175
+   line 360: 181
+   line 361: 235
+   line 362: 261
+   line 363: 301
+   line 364: 316
+   line 363: 353
+   line 365: 360
+   line 366: 401
+   line 367: 428
+   line 368: 459
+   line 369: 486
+   line 370: 517
+   line 371: 548
+   line 372: 580
+   line 373: 600
+   line 354: 605
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      609      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule Catch_();
+  LineNumberTable: 
+   line 378: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      38      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule Finally_();
+  LineNumberTable: 
+   line 382: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      17      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule SwitchBlockStatementGroups();
+  LineNumberTable: 
+   line 386: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      9      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule SwitchBlockStatementGroup();
+  LineNumberTable: 
+   line 390: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      17      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule SwitchLabel();
+  LineNumberTable: 
+   line 394: 0
+   line 395: 1
+   line 396: 24
+   line 397: 53
+   line 394: 70
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      74      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule ForInit();
+  LineNumberTable: 
+   line 402: 0
+   line 403: 1
+   line 404: 40
+   line 402: 72
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      76      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule ForUpdate();
+  LineNumberTable: 
+   line 409: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      29      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule EnumConstantName();
+  LineNumberTable: 
+   line 413: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      5      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule StatementExpression();
+  LineNumberTable: 
+   line 424: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      5      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule ConstantExpression();
+  LineNumberTable: 
+   line 428: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      5      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule Expression();
+  LineNumberTable: 
+   line 439: 0
+   line 440: 1
+   line 441: 5
+   line 439: 25
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      29      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule AssignmentOperator();
+  LineNumberTable: 
+   line 446: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      92      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule ConditionalExpression();
+  LineNumberTable: 
+   line 450: 0
+   line 451: 1
+   line 452: 5
+   line 450: 39
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      43      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule ConditionalOrExpression();
+  LineNumberTable: 
+   line 457: 0
+   line 458: 1
+   line 459: 5
+   line 457: 25
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      29      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule ConditionalAndExpression();
+  LineNumberTable: 
+   line 464: 0
+   line 465: 1
+   line 466: 5
+   line 464: 25
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      29      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule InclusiveOrExpression();
+  LineNumberTable: 
+   line 471: 0
+   line 472: 1
+   line 473: 5
+   line 471: 25
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      29      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule ExclusiveOrExpression();
+  LineNumberTable: 
+   line 478: 0
+   line 479: 1
+   line 480: 5
+   line 478: 25
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      29      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule AndExpression();
+  LineNumberTable: 
+   line 485: 0
+   line 486: 1
+   line 487: 5
+   line 485: 25
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      29      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule EqualityExpression();
+  LineNumberTable: 
+   line 492: 0
+   line 493: 1
+   line 494: 5
+   line 492: 37
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      41      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule RelationalExpression();
+  LineNumberTable: 
+   line 499: 0
+   line 500: 1
+   line 501: 5
+   line 502: 6
+   line 503: 7
+   line 504: 49
+   line 502: 69
+   line 501: 72
+   line 499: 79
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      83      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule ShiftExpression();
+  LineNumberTable: 
+   line 511: 0
+   line 512: 1
+   line 513: 5
+   line 511: 44
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      48      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule AdditiveExpression();
+  LineNumberTable: 
+   line 518: 0
+   line 519: 1
+   line 520: 5
+   line 518: 37
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      41      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule MultiplicativeExpression();
+  LineNumberTable: 
+   line 525: 0
+   line 526: 1
+   line 527: 5
+   line 525: 44
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      48      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule UnaryExpression();
+  LineNumberTable: 
+   line 532: 0
+   line 533: 1
+   line 534: 17
+   line 535: 53
+   line 532: 85
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      89      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule Primary();
+  LineNumberTable: 
+   line 540: 0
+   line 541: 1
+   line 542: 5
+   line 543: 6
+   line 544: 10
+   line 542: 42
+   line 546: 52
+   line 547: 75
+   line 548: 94
+   line 549: 101
+   line 550: 120
+   line 551: 143
+   line 552: 181
+   line 540: 205
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      209      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule IdentifierSuffix();
+  LineNumberTable: 
+   line 557: 0
+   line 558: 1
+   line 559: 6
+   line 560: 7
+   line 561: 41
+   line 559: 61
+   line 558: 68
+   line 564: 71
+   line 565: 81
+   line 566: 82
+   line 567: 86
+   line 568: 87
+   line 569: 91
+   line 570: 101
+   line 571: 108
+   line 572: 127
+   line 567: 155
+   line 565: 162
+   line 557: 166
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      170      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule ExplicitGenericInvocation();
+  LineNumberTable: 
+   line 579: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      17      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule NonWildcardTypeArguments();
+  LineNumberTable: 
+   line 583: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      43      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule ExplicitGenericInvocationSuffix();
+  LineNumberTable: 
+   line 587: 0
+   line 588: 1
+   line 589: 17
+   line 587: 37
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      41      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule PrefixOp();
+  LineNumberTable: 
+   line 594: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      45      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule PostFixOp();
+  LineNumberTable: 
+   line 598: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      17      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule Selector();
+  LineNumberTable: 
+   line 602: 0
+   line 603: 1
+   line 604: 28
+   line 605: 50
+   line 606: 69
+   line 607: 95
+   line 608: 132
+   line 602: 137
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      141      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule SuperSuffix();
+  LineNumberTable: 
+   line 613: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      40      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule BasicType();
+  LineNumberTable: 
+   line 618: 0
+   line 619: 1
+   line 620: 52
+   line 621: 66
+   line 618: 71
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      75      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule Arguments();
+  LineNumberTable: 
+   line 626: 0
+   line 627: 1
+   line 628: 5
+   line 629: 39
+   line 626: 44
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      48      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule Creator();
+  LineNumberTable: 
+   line 634: 0
+   line 635: 1
+   line 636: 28
+   line 634: 71
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      75      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule CreatedName();
+  LineNumberTable: 
+   line 641: 0
+   line 642: 1
+   line 643: 19
+   line 641: 47
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      51      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule InnerCreator();
+  LineNumberTable: 
+   line 648: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      17      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule ArrayCreatorRest();
+  LineNumberTable: 
+   line 654: 0
+   line 655: 1
+   line 656: 5
+   line 657: 6
+   line 658: 33
+   line 656: 75
+   line 654: 82
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      86      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule ClassCreatorRest();
+  LineNumberTable: 
+   line 664: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      21      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule ArrayInitializer();
+  LineNumberTable: 
+   line 668: 0
+   line 669: 1
+   line 670: 5
+   line 671: 6
+   line 672: 10
+   line 670: 30
+   line 674: 39
+   line 675: 50
+   line 668: 55
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      59      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule VariableInitializer();
+  LineNumberTable: 
+   line 680: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      17      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule ParExpression();
+  LineNumberTable: 
+   line 684: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      24      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule QualifiedIdentifier();
+  LineNumberTable: 
+   line 688: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      29      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule Dim();
+  LineNumberTable: 
+   line 692: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      17      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule DimExpr();
+  LineNumberTable: 
+   line 696: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      24      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule Type();
+  LineNumberTable: 
+   line 704: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      33      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule ReferenceType();
+  LineNumberTable: 
+   line 708: 0
+   line 709: 1
+   line 710: 21
+   line 708: 45
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      49      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule ClassType();
+  LineNumberTable: 
+   line 715: 0
+   line 716: 1
+   line 717: 19
+   line 715: 47
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      51      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule ClassTypeList();
+  LineNumberTable: 
+   line 722: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      29      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule TypeArguments();
+  LineNumberTable: 
+   line 726: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      43      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule TypeArgument();
+  LineNumberTable: 
+   line 730: 0
+   line 731: 1
+   line 732: 5
+   line 730: 49
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      53      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule TypeParameters();
+  LineNumberTable: 
+   line 737: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      43      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule TypeParameter();
+  LineNumberTable: 
+   line 741: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      29      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule Bound();
+  LineNumberTable: 
+   line 745: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      29      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule Modifier();
+  LineNumberTable: 
+   line 752: 0
+   line 753: 1
+   line 754: 5
+   line 755: 6
+   line 756: 48
+   line 755: 72
+   line 757: 75
+   line 758: 89
+   line 754: 94
+   line 752: 101
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      105      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule AnnotationTypeDeclaration();
+  LineNumberTable: 
+   line 768: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      31      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule AnnotationTypeBody();
+  LineNumberTable: 
+   line 772: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      28      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule AnnotationTypeElementDeclaration();
+  LineNumberTable: 
+   line 776: 0
+   line 777: 1
+   line 778: 21
+   line 776: 29
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      33      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule AnnotationTypeElementRest();
+  LineNumberTable: 
+   line 783: 0
+   line 784: 1
+   line 785: 24
+   line 786: 34
+   line 787: 41
+   line 788: 48
+   line 783: 53
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      57      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule AnnotationMethodOrConstantRest();
+  LineNumberTable: 
+   line 793: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      17      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule AnnotationMethodRest();
+  LineNumberTable: 
+   line 797: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      35      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule AnnotationConstantRest();
+  LineNumberTable: 
+   line 801: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      5      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule DefaultValue();
+  LineNumberTable: 
+   line 805: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      17      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule Annotation();
+  LineNumberTable: 
+   line 810: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      28      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule AnnotationRest();
+  LineNumberTable: 
+   line 814: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      17      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule NormalAnnotationRest();
+  LineNumberTable: 
+   line 818: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      28      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule ElementValuePairs();
+  LineNumberTable: 
+   line 822: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      29      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule ElementValuePair();
+  LineNumberTable: 
+   line 826: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      24      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule ElementValue();
+  LineNumberTable: 
+   line 830: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      24      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule ElementValueArrayInitializer();
+  LineNumberTable: 
+   line 834: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      39      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule ElementValues();
+  LineNumberTable: 
+   line 838: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      29      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule SingleElementAnnotationRest();
+  LineNumberTable: 
+   line 842: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      24      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule Spacing();
+  LineNumberTable: 
+   line 851: 0
+   line 854: 2
+   line 857: 21
+   line 860: 62
+   line 861: 63
+   line 862: 66
+   line 863: 94
+   line 860: 125
+   line 851: 129
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      136      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule Identifier();
+  LineNumberTable: 
+   line 875: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      39      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule Letter();
+  LineNumberTable: 
+   line 884: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      33      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule LetterOrDigit();
+  LineNumberTable: 
+   line 891: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      33      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule Keyword();
+  LineNumberTable: 
+   line 900: 0
+   line 901: 1
+   line 902: 57
+   line 903: 118
+   line 904: 172
+   line 901: 199
+   line 905: 202
+   line 900: 214
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      218      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule Keyword(java.lang.String);
+  LineNumberTable: 
+   line 945: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      10      0    this       Lorg/parboiled/examples/java/JavaParser;
+   0      10      1    keyword       Ljava/lang/String;
+
+
+public org.parboiled.Rule Literal();
+  LineNumberTable: 
+   line 953: 0
+   line 954: 1
+   line 955: 2
+   line 956: 6
+   line 957: 16
+   line 958: 23
+   line 959: 30
+   line 960: 52
+   line 961: 74
+   line 954: 94
+   line 963: 97
+   line 953: 105
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      109      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule IntegerLiteral();
+  LineNumberTable: 
+   line 969: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      43      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule DecimalNumeral();
+  LineNumberTable: 
+   line 974: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      38      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule HexNumeral();
+  LineNumberTable: 
+   line 981: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      31      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule HexDigit();
+  LineNumberTable: 
+   line 985: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      36      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule OctalNumeral();
+  LineNumberTable: 
+   line 990: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      26      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule FloatLiteral();
+  LineNumberTable: 
+   line 994: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      17      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule DecimalFloat();
+  LineNumberTable: 
+   line 999: 0
+   line 1000: 1
+   line 1001: 58
+   line 1002: 110
+   line 1003: 147
+   line 999: 182
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      186      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule Exponent();
+  LineNumberTable: 
+   line 1008: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      38      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule Digit();
+  LineNumberTable: 
+   line 1012: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      9      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule HexFloat();
+  LineNumberTable: 
+   line 1017: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      31      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule HexSignificant();
+  LineNumberTable: 
+   line 1021: 0
+   line 1022: 1
+   line 1023: 50
+   line 1021: 75
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      79      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule BinaryExponent();
+  LineNumberTable: 
+   line 1028: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      38      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule CharLiteral();
+  LineNumberTable: 
+   line 1032: 0
+   line 1033: 1
+   line 1034: 6
+   line 1035: 51
+   line 1032: 57
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      61      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+protected org.parboiled.Rule StringLiteral();
+  LineNumberTable: 
+   line 1040: 0
+   line 1041: 1
+   line 1042: 6
+   line 1043: 7
+   line 1044: 8
+   line 1045: 12
+   line 1043: 38
+   line 1042: 41
+   line 1047: 44
+   line 1048: 55
+   line 1040: 61
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      65      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule Escape();
+  LineNumberTable: 
+   line 1053: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      40      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule OctalEscape();
+  LineNumberTable: 
+   line 1057: 0
+   line 1058: 1
+   line 1059: 36
+   line 1060: 66
+   line 1057: 75
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      79      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule UnicodeEscape();
+  LineNumberTable: 
+   line 1065: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      43      0    this       Lorg/parboiled/examples/java/JavaParser;
+
+
+public org.parboiled.Rule fromCharLiteral(char);
+  LineNumberTable: 
+   line 1130: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      11      0    this       Lorg/parboiled/examples/java/JavaParser;
+   0      11      1    c       C
+
+
+public org.parboiled.Rule Terminal(java.lang.String);
+  LineNumberTable: 
+   line 1136: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      43      0    this       Lorg/parboiled/examples/java/JavaParser;
+   0      43      1    string       Ljava/lang/String;
+
+
+public org.parboiled.Rule Terminal(java.lang.String, org.parboiled.Rule);
+  LineNumberTable: 
+   line 1142: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      51      0    this       Lorg/parboiled/examples/java/JavaParser;
+   0      51      1    string       Ljava/lang/String;
+   0      51      2    mustNotFollow       Lorg/parboiled/Rule;
+
+
+}
+

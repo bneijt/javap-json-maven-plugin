@@ -1,0 +1,24 @@
+Compiled from "Main.java"
+class org.parboiled.examples.java.Main$1 extends java.lang.Object implements java.io.FileFilter{
+org.parboiled.examples.java.Main$1();
+  LineNumberTable: 
+   line 113: 0
+   line 1: 4
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      5      0    this       Lorg/parboiled/examples/java/Main$1;
+
+
+public boolean accept(java.io.File);
+  LineNumberTable: 
+   line 115: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      23      0    this       Lorg/parboiled/examples/java/Main$1;
+   0      23      1    file       Ljava/io/File;
+
+
+}
+

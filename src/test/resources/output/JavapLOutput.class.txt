@@ -1,0 +1,30 @@
+Compiled from "JavapLOutput.java"
+public class nl.bneijt.javapjson.JavapLOutput extends java.lang.Object{
+public nl.bneijt.javapjson.JavapLOutput();
+  LineNumberTable: 
+   line 10: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      5      0    this       Lnl/bneijt/javapjson/JavapLOutput;
+
+
+public void toJsonOnto(com.fasterxml.jackson.core.JsonGenerator)   throws org.apache.maven.plugin.MojoExecutionException;
+  LineNumberTable: 
+   line 14: 0
+   line 15: 9
+   line 16: 10
+   line 17: 21
+   line 18: 22
+   line 20: 33
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      34      0    this       Lnl/bneijt/javapjson/JavapLOutput;
+   0      34      1    jsonOutput       Lcom/fasterxml/jackson/core/JsonGenerator;
+   10      11      2    e       Lcom/fasterxml/jackson/core/JsonGenerationException;
+   22      11      2    e       Ljava/io/IOException;
+
+
+}
+
