@@ -69,14 +69,14 @@ public class JavaParser extends BaseParser<Object> {
     }
 
     public Rule PackageDeclaration() {
-        return Sequence(ZeroOrMore(Annotation()), Sequence(PACKAGE, QualifiedIdentifier(), SEMI));
+        return Sequence(ZeroOrMore(Annotation()), Sequence(PACKAGE, JavapQualifiedIdentifier(), SEMI));
     }
 
     public Rule ImportDeclaration() {
         return Sequence(
                 IMPORT,
                 Optional(STATIC),
-                QualifiedIdentifier(),
+                JavapQualifiedIdentifier(),
                 Optional(DOT, STAR),
                 SEMI
         );
@@ -104,7 +104,7 @@ public class JavaParser extends BaseParser<Object> {
     public Rule ClassDeclaration() {
         return Sequence(
                 CLASS,
-                Identifier(),
+                JavapIdentifier(),
                 Optional(TypeParameters()),
                 Optional(EXTENDS, ClassType()),
                 Optional(IMPLEMENTS, ClassTypeList()),
@@ -127,10 +127,10 @@ public class JavaParser extends BaseParser<Object> {
     public Rule MemberDecl() {
         return FirstOf(
                 Sequence(TypeParameters(), GenericMethodOrConstructorRest()),
-                Sequence(Type(), Identifier(), MethodDeclaratorRest()),
+                Sequence(Type(), JavapIdentifier(), MethodDeclaratorRest()),
                 Sequence(Type(), VariableDeclarators(), SEMI),
-                Sequence(VOID, Identifier(), VoidMethodDeclaratorRest()),
-                Sequence(Identifier(), ConstructorDeclaratorRest()),
+                Sequence(VOID, JavapIdentifier(), VoidMethodDeclaratorRest()),
+                Sequence(JavapIdentifier(), ConstructorDeclaratorRest()),
                 InterfaceDeclaration(),
                 ClassDeclaration(),
                 EnumDeclaration(),
@@ -140,8 +140,8 @@ public class JavaParser extends BaseParser<Object> {
 
     public Rule GenericMethodOrConstructorRest() {
         return FirstOf(
-                Sequence(FirstOf(Type(), VOID), Identifier(), MethodDeclaratorRest()),
-                Sequence(Identifier(), ConstructorDeclaratorRest())
+                Sequence(FirstOf(Type(), VOID), JavapIdentifier(), MethodDeclaratorRest()),
+                Sequence(JavapIdentifier(), ConstructorDeclaratorRest())
         );
     }
 
@@ -177,7 +177,7 @@ public class JavaParser extends BaseParser<Object> {
     public Rule InterfaceDeclaration() {
         return Sequence(
                 INTERFACE,
-                Identifier(),
+                JavapIdentifier(),
                 Optional(TypeParameters()),
                 Optional(EXTENDS, ClassTypeList()),
                 InterfaceBody()
@@ -199,7 +199,7 @@ public class JavaParser extends BaseParser<Object> {
         return FirstOf(
                 InterfaceMethodOrFieldDecl(),
                 InterfaceGenericMethodDecl(),
-                Sequence(VOID, Identifier(), VoidInterfaceMethodDeclaratorsRest()),
+                Sequence(VOID, JavapIdentifier(), VoidInterfaceMethodDeclaratorsRest()),
                 InterfaceDeclaration(),
                 AnnotationTypeDeclaration(),
                 ClassDeclaration(),
@@ -208,7 +208,7 @@ public class JavaParser extends BaseParser<Object> {
     }
 
     public Rule InterfaceMethodOrFieldDecl() {
-        return Sequence(Sequence(Type(), Identifier()), InterfaceMethodOrFieldRest());
+        return Sequence(Sequence(Type(), JavapIdentifier()), InterfaceMethodOrFieldRest());
     }
 
     public Rule InterfaceMethodOrFieldRest() {
@@ -228,7 +228,7 @@ public class JavaParser extends BaseParser<Object> {
     }
 
     public Rule InterfaceGenericMethodDecl() {
-        return Sequence(TypeParameters(), FirstOf(Type(), VOID), Identifier(), InterfaceMethodDeclaratorRest());
+        return Sequence(TypeParameters(), FirstOf(Type(), VOID), JavapIdentifier(), InterfaceMethodDeclaratorRest());
     }
 
     public Rule VoidInterfaceMethodDeclaratorsRest() {
@@ -240,7 +240,7 @@ public class JavaParser extends BaseParser<Object> {
     }
 
     public Rule ConstantDeclarator() {
-        return Sequence(Identifier(), ConstantDeclaratorRest());
+        return Sequence(JavapIdentifier(), ConstantDeclaratorRest());
     }
 
     public Rule ConstantDeclaratorRest() {
@@ -254,7 +254,7 @@ public class JavaParser extends BaseParser<Object> {
     public Rule EnumDeclaration() {
         return Sequence(
                 ENUM,
-                Identifier(),
+                JavapIdentifier(),
                 Optional(IMPLEMENTS, ClassTypeList()),
                 EnumBody()
         );
@@ -277,7 +277,7 @@ public class JavaParser extends BaseParser<Object> {
     public Rule EnumConstant() {
         return Sequence(
                 ZeroOrMore(Annotation()),
-                Identifier(),
+                JavapIdentifier(),
                 Optional(Arguments()),
                 Optional(ClassBody())
         );
@@ -300,7 +300,7 @@ public class JavaParser extends BaseParser<Object> {
     }
 
     public Rule VariableDeclarator() {
-        return Sequence(Identifier(), ZeroOrMore(Dim()), Optional(EQU, VariableInitializer()));
+        return Sequence(JavapIdentifier(), ZeroOrMore(Dim()), Optional(EQU, VariableInitializer()));
     }
 
     //-------------------------------------------------------------------------
@@ -327,7 +327,7 @@ public class JavaParser extends BaseParser<Object> {
     }
 
     public Rule VariableDeclaratorId() {
-        return Sequence(Identifier(), ZeroOrMore(Dim()));
+        return Sequence(JavapIdentifier(), ZeroOrMore(Dim()));
     }
 
     //-------------------------------------------------------------------------
@@ -366,9 +366,9 @@ public class JavaParser extends BaseParser<Object> {
                 Sequence(SYNCHRONIZED, ParExpression(), Block()),
                 Sequence(RETURN, Optional(Expression()), SEMI),
                 Sequence(THROW, Expression(), SEMI),
-                Sequence(BREAK, Optional(Identifier()), SEMI),
-                Sequence(CONTINUE, Optional(Identifier()), SEMI),
-                Sequence(Sequence(Identifier(), COLON), Statement()),
+                Sequence(BREAK, Optional(JavapIdentifier()), SEMI),
+                Sequence(CONTINUE, Optional(JavapIdentifier()), SEMI),
+                Sequence(Sequence(JavapIdentifier(), COLON), Statement()),
                 Sequence(StatementExpression(), SEMI),
                 SEMI
         );
@@ -410,7 +410,7 @@ public class JavaParser extends BaseParser<Object> {
     }
 
     public Rule EnumConstantName() {
-        return Identifier();
+        return JavapIdentifier();
     }
 
     //-------------------------------------------------------------------------
@@ -547,7 +547,7 @@ public class JavaParser extends BaseParser<Object> {
                 Sequence(SUPER, SuperSuffix()),
                 Literal(),
                 Sequence(NEW, Creator()),
-                Sequence(QualifiedIdentifier(), Optional(IdentifierSuffix())),
+                Sequence(JavapQualifiedIdentifier(), Optional(IdentifierSuffix())),
                 Sequence(BasicType(), ZeroOrMore(Dim()), DOT, CLASS),
                 Sequence(VOID, DOT, CLASS)
         );
@@ -586,7 +586,7 @@ public class JavaParser extends BaseParser<Object> {
     public Rule ExplicitGenericInvocationSuffix() {
         return FirstOf(
                 Sequence(SUPER, SuperSuffix()),
-                Sequence(Identifier(), Arguments())
+                Sequence(JavapIdentifier(), Arguments())
         );
     }
 
@@ -600,7 +600,7 @@ public class JavaParser extends BaseParser<Object> {
 
     public Rule Selector() {
         return FirstOf(
-                Sequence(DOT, Identifier(), Optional(Arguments())),
+                Sequence(DOT, JavapIdentifier(), Optional(Arguments())),
                 Sequence(DOT, ExplicitGenericInvocation()),
                 Sequence(DOT, THIS),
                 Sequence(DOT, SUPER, SuperSuffix()),
@@ -610,7 +610,7 @@ public class JavaParser extends BaseParser<Object> {
     }
 
     public Rule SuperSuffix() {
-        return FirstOf(Arguments(), Sequence(DOT, Identifier(), Optional(Arguments())));
+        return FirstOf(Arguments(), Sequence(DOT, JavapIdentifier(), Optional(Arguments())));
     }
 
     @MemoMismatches
@@ -639,13 +639,13 @@ public class JavaParser extends BaseParser<Object> {
 
     public Rule CreatedName() {
         return Sequence(
-                Identifier(), Optional(NonWildcardTypeArguments()),
-                ZeroOrMore(DOT, Identifier(), Optional(NonWildcardTypeArguments()))
+                JavapIdentifier(), Optional(NonWildcardTypeArguments()),
+                ZeroOrMore(DOT, JavapIdentifier(), Optional(NonWildcardTypeArguments()))
         );
     }
 
     public Rule InnerCreator() {
-        return Sequence(Identifier(), ClassCreatorRest());
+        return Sequence(JavapIdentifier(), ClassCreatorRest());
     }
 
     // The following is more generous than JLS 15.10. According to that definition,
@@ -684,8 +684,8 @@ public class JavaParser extends BaseParser<Object> {
         return Sequence(LPAR, Expression(), RPAR);
     }
 
-    public Rule QualifiedIdentifier() {
-        return Sequence(Identifier(), ZeroOrMore(DOT, Identifier()));
+    public Rule JavapQualifiedIdentifier() {
+        return Sequence(JavapIdentifier(), ZeroOrMore(DOT, JavapIdentifier()));
     }
 
     public Rule Dim() {
@@ -713,8 +713,8 @@ public class JavaParser extends BaseParser<Object> {
 
     public Rule ClassType() {
         return Sequence(
-                Identifier(), Optional(TypeArguments()),
-                ZeroOrMore(DOT, Identifier(), Optional(TypeArguments()))
+                JavapIdentifier(), Optional(TypeArguments()),
+                ZeroOrMore(DOT, JavapIdentifier(), Optional(TypeArguments()))
         );
     }
 
@@ -738,7 +738,7 @@ public class JavaParser extends BaseParser<Object> {
     }
 
     public Rule TypeParameter() {
-        return Sequence(Identifier(), Optional(EXTENDS, Bound()));
+        return Sequence(JavapIdentifier(), Optional(EXTENDS, Bound()));
     }
 
     public Rule Bound() {
@@ -765,7 +765,7 @@ public class JavaParser extends BaseParser<Object> {
     //-------------------------------------------------------------------------
 
     public Rule AnnotationTypeDeclaration() {
-        return Sequence(AT, INTERFACE, Identifier(), AnnotationTypeBody());
+        return Sequence(AT, INTERFACE, JavapIdentifier(), AnnotationTypeBody());
     }
 
     public Rule AnnotationTypeBody() {
@@ -794,7 +794,7 @@ public class JavaParser extends BaseParser<Object> {
     }
 
     public Rule AnnotationMethodRest() {
-        return Sequence(Identifier(), LPAR, RPAR, Optional(DefaultValue()));
+        return Sequence(JavapIdentifier(), LPAR, RPAR, Optional(DefaultValue()));
     }
 
     public Rule AnnotationConstantRest() {
@@ -807,7 +807,7 @@ public class JavaParser extends BaseParser<Object> {
 
     @MemoMismatches
     public Rule Annotation() {
-        return Sequence(AT, QualifiedIdentifier(), Optional(AnnotationRest()));
+        return Sequence(AT, JavapQualifiedIdentifier(), Optional(AnnotationRest()));
     }
 
     public Rule AnnotationRest() {
@@ -823,7 +823,7 @@ public class JavaParser extends BaseParser<Object> {
     }
 
     public Rule ElementValuePair() {
-        return Sequence(Identifier(), EQU, ElementValue());
+        return Sequence(JavapIdentifier(), EQU, ElementValue());
     }
 
     public Rule ElementValue() {
@@ -871,7 +871,7 @@ public class JavaParser extends BaseParser<Object> {
 
     @SuppressSubnodes
     @MemoMismatches
-    public Rule Identifier() {
+    public Rule JavapIdentifier() {
         return Sequence(TestNot(Keyword()), Letter(), ZeroOrMore(LetterOrDigit()), Spacing());
     }
 

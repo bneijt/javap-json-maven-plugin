@@ -12,8 +12,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 import org.parboiled.Parboiled;
-import org.parboiled.parserunners.BasicParseRunner;
-import org.parboiled.support.ParseTreeUtils;
+import org.parboiled.parserunners.TracingParseRunner;
 import org.parboiled.support.ParsingResult;
 
 @RunWith(Parameterized.class)
@@ -40,8 +39,7 @@ public class JavapLParserTest {
             String contents = org.parboiled.common.FileUtils.readAllText(target);
             assertNotNull("Should be able to load output file", contents);
             JavapLParser parser = Parboiled.createParser(JavapLParser.class);
-            ParsingResult<?> parsingResult = new BasicParseRunner(parser.JavapLOutput()).run(contents);
-            ParseTreeUtils.printNodeTree(parsingResult);
+            ParsingResult<?> parsingResult = new TracingParseRunner(parser.JavapLOutput()).run(contents);
             assertTrue("Parser should match " + target.getName(), parsingResult.matched);
     }
 }

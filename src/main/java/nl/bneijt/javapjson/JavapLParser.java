@@ -2,6 +2,8 @@ package nl.bneijt.javapjson;
 
 import org.parboiled.Rule;
 import org.parboiled.annotations.BuildParseTree;
+import org.parboiled.annotations.MemoMismatches;
+import org.parboiled.annotations.SuppressSubnodes;
 import org.parboiled.examples.java.JavaParser;
 
 @SuppressWarnings({"InfiniteRecursion"})
@@ -19,11 +21,30 @@ public class JavapLParser extends JavaParser  {
 
     public Rule JavapInterfaceDeclaration() {
         return Sequence(
-            ZeroOrMore(MemberDecl()),
-            Modifier(), QualifiedIdentifier(), "();", NEWLINE
+            ZeroOrMore(Member()),
+            ZeroOrMore(NEWLINE),
+            Modifier(), JavapQualifiedIdentifier(), "();", NEWLINE
             ,LineNumberTable()
             ,LocalVariableTable()
             );
+    }
+
+    public Rule JavapQualifiedIdentifier() {
+        return Sequence(JavapIdentifier(), ZeroOrMore(DOT, JavapIdentifier()));
+    }
+
+    @SuppressSubnodes
+    @MemoMismatches
+    public Rule JavapIdentifier() {
+        return Sequence(TestNot(Keyword()), Letter(), ZeroOrMore(LetterOrDigit()), ZeroOrMore(MangelPattern()), Spacing());
+    }
+
+    public Rule MangelPattern() {
+        return Sequence("$", IntegerLiteral());
+    }
+
+    public Rule Member() {
+        return Sequence(Modifier(), JavapQualifiedIdentifier(), VariableDeclarator(), ";", NEWLINE);
     }
 
     public Rule LocalVariableTable() {
@@ -52,15 +73,18 @@ public class JavapLParser extends JavaParser  {
 
     public Rule JavapLClassDeclaration() {
         return Sequence(
-                Modifier(),
+                ZeroOrMore(Modifier()),
                 CLASS,
-                QualifiedIdentifier(),
+                JavapQualifiedIdentifier(),
                 Optional(TypeParameters()),
-                Optional(EXTENDS, QualifiedIdentifier()),
-                Optional(IMPLEMENTS, ClassTypeList())
+                Optional(EXTENDS, JavapQualifiedIdentifier()),
+                Optional(IMPLEMENTS, QualifiedTypeList())
         );
     }
 
+    public Rule QualifiedTypeList() {
+        return Sequence(JavapQualifiedIdentifier(), ZeroOrMore(COMMA, JavapQualifiedIdentifier()));
+    }
 
 
 }
